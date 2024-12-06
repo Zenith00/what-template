@@ -1,7 +1,7 @@
 {
-  "id": "module",
-  "title": "New Module",
-  "description": "",
+  "id": "what-template",
+  "title": "what template",
+  "description": "tries to show templates on mouseover :)",
   "version": "#{VERSION}#",
   "library": "false",
   "manifestPlusVersion": "1.2.0",
@@ -13,8 +13,7 @@
   "authors": [
     {
       "name": "What Template",
-      "url": "https://github.com/zenith00/what-template",
-      "discord": "discordID#0001"
+      "url": "https://github.com/zenith00/what-template"
     }
   ],
   "relationships": {
