@@ -17,7 +17,7 @@ Hooks.on("renderApplication", (app, html) => {
         document.querySelectorAll(`[data-template-path], [style*="modules/"]`).forEach(element => {
             const cssEnd = [...element.style.cssText.matchAll(/modules\/[a-zA-Z-\/.0-9]*/gm)].join(",");
             if (!element.getAttribute("data-tooltip")?.endsWith(element.getAttribute("data-template-path") && !element.getAttribute("data-tooltip")?.endsWith(cssEnd))) {
-                element.setAttribute("data-tooltip", (element.getAttribute("data-template-tooltip") ?? "") + (element.getAttribute("data-template-path") ?? cssEnd));
+                element.setAttribute("data-tooltip", (element.getAttribute("data-template-tooltip") ?? "") + (element.getAttribute("data-template-path") ?? cssEnd).split("/")[0]);
             }
         })
     }, 500);
