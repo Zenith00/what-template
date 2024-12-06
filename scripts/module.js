@@ -24,7 +24,7 @@ Hooks.on("renderApplication", (app, html) => {
         document.querySelectorAll(`[data-template-path], [style*="modules/"]`).forEach(element => {
             const cssEnd = [...element.style.cssText.matchAll(/modules\/[a-zA-Z-\/.0-9]*/gm)].join(",");
             let tooltip = (element.getAttribute("data-template-path") ?? cssEnd);
-            if (tooltip.includes("modules") && game.settings.get("what-template", "showFullPath")) {
+            if (tooltip.includes("modules") && !game.settings.get("what-template", "showFullPath")) {
                 tooltip = tooltip.split("modules/")[1].split("/")[0];
             }
             if (!element.getAttribute("data-tooltip")?.endsWith(tooltip)) {
